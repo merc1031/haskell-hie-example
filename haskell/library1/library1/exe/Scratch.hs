@@ -1,8 +1,6 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 
 import Control.Monad (guard)
-type Algebra f a = f a -> a
-newtype Mu f = InF { outF :: f (Mu f) }
 
 {-
 >>> :t guard
@@ -35,8 +33,11 @@ guard :: Alternative f => Bool -> f ()
 
 {-
 prop> \(l::[Int]) -> reverse (reverse l) == l
-Add QuickCheck to your cabal dependencies to run this test.
++++ OK, passed 100 tests.
 
+prop> \(l::Int, r::Int) -> l + r == r + (if l < 80 then l else l + 1)
+*** Failed! Falsified (after 44 tests and 3 shrinks):
+(40,0)
 -}
 
 test = [show x | x <- take 10 [1..] ] >>= \a -> guard (not (a == "1" || a == "5")) >> a <> "a"

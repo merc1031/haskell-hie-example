@@ -9,6 +9,8 @@ description:         Please see the README
 
 dependencies:
 - base >= 4.7 && < 5
+- library1
+- library2
 
 library:
   source-dirs: src
@@ -24,6 +26,8 @@ executables:
     - -with-rtsopts=-T
     dependencies:
     - application1
+    - library1
+    - library2
 
 tests:
   application1-test:

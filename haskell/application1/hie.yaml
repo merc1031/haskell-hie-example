@@ -1,0 +1,31 @@
+cradle:
+  stack:
+    - path: "../library1/library1/src"
+      component: "library1:lib"
+
+    - path: "../library1/library1/exe/Scratch.hs"
+      component: "library1:exe:exe"
+
+    - path: "../library1/library1/exe/Paths_library1.hs"
+      component: "library1:exe:exe"
+
+    - path: "../library1/library1/test"
+      component: "library1:test:library1-test"
+
+    - path: "../library2/library2/src"
+      component: "library2:lib"
+
+    - path: "../library2/library2/test"
+      component: "library2:test:library2-test"
+
+    - path: "application1/src"
+      component: "application1:lib"
+
+    - path: "application1/app/Main.hs"
+      component: "application1:exe:application1-exe"
+
+    - path: "application1/app/Paths_application1.hs"
+      component: "application1:exe:application1-exe"
+
+    - path: "application1/test"
+      component: "application1:test:application1-test"

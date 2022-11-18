@@ -9,6 +9,7 @@ description:         Please see the README
 
 dependencies:
 - base                  >= 4        && < 5
+- text
 
 library:
   source-dirs: src
@@ -33,7 +34,6 @@ tests:
     - tasty-discover
     - tasty-hspec
     - tasty-quickcheck
-    - QuickCheck
 
 executables:
   exe:
@@ -52,4 +52,3 @@ executables:
     - tasty-discover
     - tasty-hspec
     - tasty-quickcheck
-    - QuickCheck
