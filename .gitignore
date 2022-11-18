@@ -1,0 +1,5 @@
+*.cabal
+.stack-work
+.stack
+.rlibs
+stack.yaml.lock

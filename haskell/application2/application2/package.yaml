@@ -1,0 +1,43 @@
+name:                application2
+version:             0.1.0.0
+license:             BSD3
+author:              "Leonidas Loucas"
+maintainer:          "merc1031@gmail.com"
+copyright:           "2020 Leonidas Loucas"
+
+description:         Please see the README
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  application2-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -with-rtsopts=-T
+    dependencies:
+    - application2
+
+tests:
+  application2-test:
+    main:                TestDriver.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - application2
+    - hspec
+    - hspec-discover
+    - HUnit
+    - tasty
+    - tasty-discover
+    - tasty-hspec
